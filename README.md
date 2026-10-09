@@ -1,1 +1,62 @@
-# ProtoKAN
+# ProtoKAN: Integrating Kolmogorov–Arnold Networks into Prototype Learning for Interpretable Image Classification
+
+**Official project repository for ProtoKAN**
+
+> **Code availability:** The source code is not publicly available at this stage. We plan to release the implementation and instructions for reproducing the experiments upon acceptance of the manuscript.
+
+## Overview
+
+ProtoKAN is a prototype-based framework for interpretable fine-grained image classification. It integrates Kolmogorov–Arnold Networks (KAN) into visual part-prototype learning while retaining the *“this looks like that”* reasoning structure.
+
+The framework contains four main modules:
+
+- **KAN Feature Projection (KFP):** Uses learnable B-spline functions for nonlinear feature projection.
+- **KAN-Gated Deformable Matching (KGDM):** Uses a KAN-based gate to modulate offsets for deformable prototype matching.
+- **Prototype Context Calibration (PCC):** Calibrates prototype similarity scores using global image context.
+- **KAN Prototype Classifier (KAN-PC):** Maps calibrated prototype scores to class logits through nonlinear prototype-level responses, whose contributions can be explicitly aggregated.
+
+## Reported Results
+
+Top-1 classification accuracy reported in the manuscript:
+
+| Dataset       | Top-1 Accuracy |
+| ------------- | -------------: |
+| CUB-200-2011  |      **87.4%** |
+| Stanford Cars |      **89.3%** |
+
+These results are reported under the experimental settings described in the manuscript.
+
+## Code Release
+
+The manuscript has not yet been accepted for publication. The implementation is therefore **not publicly released at present**.
+
+Upon acceptance, we plan to update this repository with the source code, environment requirements, configuration files, and instructions for training and evaluation.
+
+Until then, this repository serves as the official project information page.
+
+## Datasets
+
+Our experiments use the publicly available **CUB-200-2011** and **Stanford Cars** datasets.
+
+Dataset files are not distributed through this repository.
+
+## Authors
+
+- Xiongwei Huang (equal first author)
+- Xiaolin Li (equal first author)
+- Binbin Chen
+- Mingchen Jiang
+- Shiguo Huang (corresponding author)
+
+All authors are affiliated with **Fujian Agriculture and Forestry University, China**.
+
+## Contact
+
+For questions about this project, please contact:
+
+- **Xiongwei Huang:** [huangxw0408@gmail.com](mailto\:huangxw0408@gmail.com)
+- **Shiguo Huang (corresponding author):** [sghuang@fafu.edu.cn](mailto\:sghuang@fafu.edu.cn)
+
+## Citation
+
+Citation details will be added when the manuscript's publication information becomes available.

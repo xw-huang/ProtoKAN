@@ -8,7 +8,7 @@
 
 ProtoKAN is a prototype-based framework for interpretable fine-grained image classification. It integrates Kolmogorov–Arnold Networks (KAN) into visual part-prototype learning while retaining the *“this looks like that”* reasoning structure.
 
-The framework contains four main modules:
+The framework consists of four main modules:
 
 - **KAN Feature Projection (KFP):** Uses learnable B-spline functions for nonlinear feature projection.
 - **KAN-Gated Deformable Matching (KGDM):** Uses a KAN-based gate to modulate offsets for deformable prototype matching.
@@ -17,33 +17,33 @@ The framework contains four main modules:
 
 ## Reported Results
 
-Top-1 classification accuracy reported in the manuscript:
+The following Top-1 classification accuracies are reported in the manuscript under the experimental settings described therein.
 
-| Dataset       | Top-1 Accuracy |
-| ------------- | -------------: |
-| CUB-200-2011  |      **87.4%** |
-| Stanford Cars |      **89.3%** |
+| Dataset | Top-1 Accuracy |
+|:--|--:|
+| CUB-200-2011 | **87.4%** |
+| Stanford Cars | **89.3%** |
 
-These results are reported under the experimental settings described in the manuscript.
+The source code and detailed reproduction instructions will be added to this repository as described in the Code Release section.
 
 ## Code Release
 
-The manuscript has not yet been accepted for publication. The implementation is therefore **not publicly released at present**.
+The manuscript has not yet been accepted for publication. The source code is therefore not publicly available at present.
 
-Upon acceptance, we plan to update this repository with the source code, environment requirements, configuration files, and instructions for training and evaluation.
+Upon acceptance, we plan to update this repository with the implementation, environment requirements, configuration files, and instructions for training and evaluation.
 
-Until then, this repository serves as the official project information page.
+Until the code is released, this repository serves as the official project information page.
 
 ## Datasets
 
 Our experiments use the publicly available **CUB-200-2011** and **Stanford Cars** datasets.
 
-Dataset files are not distributed through this repository.
+Dataset files are not distributed through this repository. Users should obtain the datasets from their respective official sources and follow the applicable terms of use.
 
 ## Authors
 
-- Xiongwei Huang (equal first author)
-- Xiaolin Li (equal first author)
+- Xiongwei Huang (co-first author)
+- Xiaolin Li (co-first author)
 - Binbin Chen
 - Mingchen Jiang
 - Shiguo Huang (corresponding author)
@@ -54,9 +54,9 @@ All authors are affiliated with **Fujian Agriculture and Forestry University, Ch
 
 For questions about this project, please contact:
 
-- **Xiongwei Huang:** [huangxw0408@gmail.com](mailto\:huangxw0408@gmail.com)
-- **Shiguo Huang (corresponding author):** [sghuang@fafu.edu.cn](mailto\:sghuang@fafu.edu.cn)
+- **Xiongwei Huang:** [huangxw0408@gmail.com](mailto:huangxw0408@gmail.com)
+- **Shiguo Huang (corresponding author):** [sghuang@fafu.edu.cn](mailto:sghuang@fafu.edu.cn)
 
 ## Citation
 
-Citation details will be added when the manuscript's publication information becomes available.
+A citation entry will be provided once the manuscript is published.

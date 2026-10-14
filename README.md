@@ -43,10 +43,10 @@ Dataset files are not distributed through this repository. Users should obtain t
 ## Authors
 
 - Xiongwei Huang (co-first author)
--Prof. Xiaolin Li (co-first author)
+- Prof. Xiaolin Li (co-first author)
 - Binbin Chen
 - Mingchen Jiang
--Prof. Shiguo Huang (corresponding author)
+- Prof. Shiguo Huang (corresponding author)
 
 All authors are affiliated with **Fujian Agriculture and Forestry University, China**.
 

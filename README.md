@@ -1,4 +1,4 @@
-# ProtoKAN: Integrating Kolmogorov–Arnold Networks into Prototype Learning for Interpretable Image Classification
+# ProtoKAN: Nonlinearizing the Prototype Evidence Flow with Kolmogorov–Arnold Networks for Interpretable Image Classification
 
 **Official project repository for ProtoKAN**
 
@@ -6,23 +6,25 @@
 
 ## Overview
 
-ProtoKAN is a prototype-based framework for interpretable fine-grained image classification. It integrates Kolmogorov–Arnold Networks (KAN) into visual part-prototype learning while retaining the *“this looks like that”* reasoning structure.
+ProtoKAN is a part-prototype network for interpretable fine-grained image classification. It makes the response of each operator in the prototype evidence flow learnable by instantiating three of the four operators with univariate B-spline functions grounded in the Kolmogorov–Arnold representation theorem, and the calibration operator with a context-aware attention mechanism, while preserving the *"this looks like that"* reasoning topology.
 
-The framework consists of four main modules:
+The framework consists of four modules:
 
-- **KAN Feature Projection (KFP):** Uses learnable B-spline functions for nonlinear feature projection.
-- **KAN-Gated Deformable Matching (KGDM):** Uses a KAN-based gate to modulate offsets for deformable prototype matching.
-- **Prototype Context Calibration (PCC):** Calibrates prototype similarity scores using global image context.
-- **KAN Prototype Classifier (KAN-PC):** Maps calibrated prototype scores to class logits through nonlinear prototype-level responses, whose contributions can be explicitly aggregated.
+- **KAN Feature Projection (KFP):** replaces the fixed channel projection with spline-parameterized channel mixing.
+- **KAN-Gated Deformable Matching (KGDM):** modulates the predicted deformation offsets with a gate conditioned on global image context.
+- **Prototype Context Calibration (PCC):** recalibrates prototype similarities using image-level context.
+- **KAN Prototype Classifier (KPC):** replaces the linear head with spline-parameterized evidence aggregation.
 
 ## Reported Results
 
-The following Top-1 classification accuracies are reported in the manuscript under the experimental settings described therein.
+With a ResNet-50 backbone, ProtoKAN reaches the following Top-1 accuracies under the experimental settings described in the manuscript.
 
 | Dataset | Top-1 Accuracy |
 |:--|--:|
-| CUB-200-2011 | **87.4%** |
-| Stanford Cars | **89.3%** |
+| CUB-200-2011 | **87.6%** |
+| Stanford Cars | **89.5%** |
+
+This is the highest among the compared methods on Stanford Cars and within 0.2 points of the best on CUB-200-2011. An ablation study on a subset of CUB-200-2011 shows that each of the four modules contributes positively and that the full configuration performs best.
 
 The source code and detailed reproduction instructions will be added to this repository as described in the Code Release section.
 
@@ -43,10 +45,10 @@ Dataset files are not distributed through this repository. Users should obtain t
 ## Authors
 
 - Xiongwei Huang (co-first author)
-- Prof. Xiaolin Li (co-first author)
+- Xiaolin Li (co-first author)
 - Binbin Chen
 - Mingchen Jiang
-- Prof. Shiguo Huang (corresponding author)
+- Shiguo Huang (corresponding author)
 
 All authors are affiliated with **Fujian Agriculture and Forestry University, China**.
 
